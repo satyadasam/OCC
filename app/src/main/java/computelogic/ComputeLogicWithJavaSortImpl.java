@@ -19,25 +19,37 @@ public class ComputeLogicWithJavaSortImpl implements ComputeLogic {
     public ScoreHolder compute(String namesInFile){
         logger.debug("::: In compute method");
         ScoreHolder scoreValue = new ScoreHolder();
-
         try {
-            List<String> list = Arrays.stream(namesInFile.split(","))
+        	
+          /* List<String> list = Arrays.stream(namesInFile.split(","))
                     .parallel().map(ss -> ss.substring(1, ss.length() - 1))
                     .collect(Collectors.toList());
+        	
+        	 Collections.sort(list);
+        	
+        	          BigDecimal score = IntStream.range(0, list.size()).parallel()
+            .mapToLong(e -> list.get(e).chars().map(c -> c - 64).sum() * (e + 1))
+            .mapToObj(bd -> new BigDecimal(bd))
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
+        	 */
+        	
+        	 String[] list = Arrays.stream(namesInFile.split(","))
+                     .parallel().map(ss -> ss.substring(1, ss.length() - 1))
+                     .toArray(size->new String[size]);
 
-            Collections.sort(list);
-
-            BigDecimal score = IntStream.range(0, list.size()).parallel()
-                    .mapToLong(e -> list.get(e).chars().map(c -> c - 64).sum() * (e + 1))
-                    .mapToObj(bd -> new BigDecimal(bd))
-                    .reduce(BigDecimal.ZERO, BigDecimal::add);
-
+        	 Arrays.parallelSort(list);
+        	 
+             BigDecimal score = IntStream.range(0, list.length).parallel()
+                     .mapToLong(e -> list[e].chars().map(c -> c - 64).sum() * (e + 1))
+                     .mapToObj(bd -> new BigDecimal(bd))
+                     .reduce(BigDecimal.ZERO, BigDecimal::add);
+        	 
             scoreValue = new ScoreHolder(score);
         }
         catch (Exception e){
             logger.error("Error computing score " + e);
         }
-
         return scoreValue;
     }
 }
+
