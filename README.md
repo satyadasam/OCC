@@ -9,3 +9,5 @@ Using JDK sort, Standard Trie and Burstsort
 # JMH
 for Benchmark tool, we are using this https://github.com/openjdk/jmh
 to compare the performance of 3 mothods
+
+https://github.com/satyadasam/OCC/blob/master/jmhfinal.PNG
