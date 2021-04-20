@@ -14,7 +14,8 @@ Link for Burstsort library [Burstsort4j](https://github.com/nlfiedler/burstsort4
 for Benchmark tool, we are using [JMH](https://github.com/openjdk/jmh)
 to compare the performance of the 3 mothods.
 
-To get the JMH stats, run the BenchMarkRunner.java as Java application from JMH module
+To get the JMH stats, run the BenchMarkRunner.java as Java application from JMH module.
+
 Here is output from 4 core machine. Output vary based on the number of cores of the machine.
 ![output from JMH](https://github.com/satyadasam/OCC/blob/master/jmhfinal.PNG)
 
