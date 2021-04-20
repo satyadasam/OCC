@@ -1,4 +1,0 @@
-package benchmark.jmh_generated;
-public class LogicBenchmark_StateComputeLogic_jmhType extends LogicBenchmark_StateComputeLogic_jmhType_B3 {
-}
-

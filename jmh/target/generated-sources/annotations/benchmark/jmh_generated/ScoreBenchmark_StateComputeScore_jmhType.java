@@ -1,4 +1,0 @@
-package benchmark.jmh_generated;
-public class ScoreBenchmark_StateComputeScore_jmhType extends ScoreBenchmark_StateComputeScore_jmhType_B3 {
-}
-

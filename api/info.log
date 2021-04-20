@@ -1,3 +1,0 @@
-[main] ERROR computelogic.ComputeLogicImplWithBurstsort  - Error computing score java.lang.StringIndexOutOfBoundsException: begin 1, end -1, length 0
-[main] ERROR computelogic.ComputeLogicImpl  - Error computing score java.lang.StringIndexOutOfBoundsException: begin 1, end -1, length 0
-[main] ERROR computelogic.ComputeLogicImplWithTrie  - Error computing score java.lang.StringIndexOutOfBoundsException: begin 1, end -1, length 0
