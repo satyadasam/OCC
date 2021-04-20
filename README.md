@@ -1,5 +1,5 @@
 # Name Scoring
-It takes the input file from command line and score it based on the entered computational logic
+It takes the input file from command line and score it based on the entered computational logic method. 
 It has two modules namely App and JMH
 
 # App
